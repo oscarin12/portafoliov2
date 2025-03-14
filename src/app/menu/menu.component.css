@@ -1,0 +1,134 @@
+/* ======== Estilos Generales ======== */
+.navbar {
+  background: rgba(51, 51, 51, 0.9);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; /* Distribuye el logo y menú */
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+/* ======== Estilos del Menú ======== */
+.menu {
+  margin-left: auto;
+  padding-right: 20px; /* Agrega espacio a la derecha */
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+/* ======== Estilos de Animación para los Botones ======== */
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  position: relative;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* ======== Efecto Hover en los enlaces ======== */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.menu a:hover {
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* ======== Mueve el logo a la izquierda ======== */
+.logo {
+  margin-right: auto;
+}
+
+.logo a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ======== Botón de Menú en Móviles ======== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding-right: 30px; /* Agrega espacio a la derecha */
+}
+
+/* ======== Menú en Pantallas Pequeñas ======== */
+@media (max-width: 768px) {
+  .container {
+    justify-content: space-between;
+  }
+
+  /* Menú cerrado por defecto */
+  .menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(34, 34, 34, 0.95);
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Menú abierto */
+  .menu.open {
+    height: auto;
+    opacity: 1;
+    padding: 10px 0;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

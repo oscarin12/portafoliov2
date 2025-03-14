@@ -1,0 +1,17 @@
+<br><br>
+<div class="container background-section" id="proyectos">
+  <h3 class="title animate-title floating-title">Proyectos</h3>
+  <hr class="title-underline">
+  <br>
+  <div class="projects-grid">
+    <div *ngFor="let proyecto of proyectos" class="project-card">
+      <img [src]="proyecto.imagen" class="project-image" alt="Imagen del proyecto">
+      <div class="project-info">
+        <h4 class="project-title">{{ proyecto.nombre }}</h4>
+        <p class="project-link">
+          <a [href]="proyecto.url" target="_blank">Ver Proyecto</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

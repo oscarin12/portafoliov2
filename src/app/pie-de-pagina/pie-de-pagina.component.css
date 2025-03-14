@@ -1,0 +1,25 @@
+footer {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .social-icon {
+    font-size: 1.7rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #cdd6f4;
+    margin: 0 15px; /* Aumenta la separación */
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    color: #89b4fa;
+  }
+  
+  footer svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  

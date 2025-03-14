@@ -1,0 +1,108 @@
+/* Reset para eliminar márgenes y padding innecesarios */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #dbd0d0; /* Asegura que el fondo cubra toda la pantalla */
+    overflow-x: hidden; /* Evita desplazamiento lateral */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Usa "min-height" en lugar de "height" para permitir más contenido */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    background: #474646;
+}
+
+/* Tarjeta con contenido */
+.card {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 900px;
+    width: 100%; /* Asegura que la tarjeta no tenga márgenes laterales inesperados */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Efecto en el nombre */
+  .name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  /* Brillo en el nombre */
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff;
+    }
+    to {
+      text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+    }
+  }
+  
+  /* Sombra en el título */
+  .title {
+    font-size: 1.2rem;
+    color: #bbbbbb;
+    margin-bottom: 10px;
+  }
+  
+  /* Efecto de opacidad en el párrafo */
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .description:hover {
+    opacity: 1;
+  }
+/* Contenedor del nombre y la imagen */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Imagen de perfil con enlace */
+.profile a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse sobre la imagen */
+.profile a:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+}
+
+/* Imagen de perfil */
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00eaff;
+}

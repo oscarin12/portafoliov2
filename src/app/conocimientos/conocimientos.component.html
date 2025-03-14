@@ -1,0 +1,20 @@
+<br><br>
+<h3 class="title animate-title floating-title">conocimientos</h3>
+<div class="carousel-container" id="cono">
+
+    <button class="carousel-btn prev" (click)="prevSlide()">&#10094;</button>
+  
+    <div class="carousel">
+      <div class="carousel-track" [style.transform]="'translateX(' + (-currentIndex * 100 / totalSlides) + '%)'">
+        <div class="carousel-item" *ngFor="let item of conocimientos">
+          <figure>
+            <img [src]="item.img" [alt]="item.name">
+            <figcaption>{{ item.name }}</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  
+    <button class="carousel-btn next" (click)="nextSlide()">&#10095;</button>
+  </div>
+  
