@@ -21,11 +21,13 @@
 
 /* Línea decorativa debajo del título */
 .title-underline {
-    width: 60px;
+    width: 200px;
     height: 4px;
     background-color: #007bff;
     margin: 5px auto 20px;
     border-radius: 2px;
+    animation: fadeIn 1s ease-in-out, floating 3s ease-in-out infinite;
+    
 }
 
 /* Grid de proyectos */
