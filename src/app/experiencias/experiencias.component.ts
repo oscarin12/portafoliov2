@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { PdfService } from '../services/pdf.service';
 
 
 @Component({
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
   templateUrl: './experiencias.component.html',
   styleUrl: './experiencias.component.css'
 })
-export class ExperienciasComponent {
+export class ExperienciasComponent implements AfterViewInit {
+  @ViewChild('experiencia', { static: false }) experiencia!: ElementRef;
 
+  constructor(private pdfService: PdfService) {}
+
+  ngAfterViewInit() {
+    if (this.experiencia) {
+      this.pdfService.setContentRef('experiencia', this.experiencia);
+    }
+  }
 }
