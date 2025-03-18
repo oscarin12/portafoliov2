@@ -50,7 +50,7 @@ export class MenuComponent {
     doc.text('Oscar Medina Rucan', 60, 20);
     doc.setFontSize(12);
     doc.setTextColor(100);
-    doc.text('Ingeniería de Ejecución en Informática - Desarrollo de Sistemas', 60, 27);
+    doc.text('Ingeniería de Ejecución en Informática. Mención Desarrollo de Sistemas', 60, 27);
 
     // Datos de contacto
     doc.setFontSize(10);
@@ -111,7 +111,7 @@ Mi compromiso con el aprendizaje continuo impulsa mi desempeño y me motiva a co
       startY: yPosition,
       head: [['Título', 'Institución', 'Fecha']],
       body: [
-        ['Ingeniería de Ejecución en Informática', 'Instituto Profesional AIEP, Temuco', 'Jul 2021'],
+        ['Ingeniería de Ejecución en Informática. Mención Desarrollo de Sistemas', 'Instituto Profesional AIEP, Temuco', 'Jul 2021'],
         ['Certificado en Programación y Análisis de Sistemas', 'Instituto Profesional AIEP, Temuco', 'May 2019']
       ],
       theme: 'striped',
