@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class ProyectosComponent {
   proyectos = [
-    { nombre: 'Próximo Proyecto', url: 'https://oscarin12.github.io/rick-and-morty-test/',url1:'https://github.com/oscarin12/rick-and-morty-test', imagen: 'assets/img/rick.jpg' },
+    { nombre: 'Rick y morty', url: 'https://oscarin12.github.io/rick-and-morty-test/',url1:'https://github.com/oscarin12/rick-and-morty-test', imagen: 'assets/img/rick.jpg' },
     { nombre: 'Ejecución 1', url: 'https://oscarin12.github.io/EJECICIOS1/', url1:'https://github.com/oscarin12/EJECICIOS1', imagen: 'assets/img/image.png' },
     { nombre: 'Ejecución 2', url: 'https://oscarin12.github.io/EJECICIOS2/',url1:'https://github.com/oscarin12/ejercicio2', imagen: 'assets/img/imagen2.png' },
     { nombre: 'Ejecución 3', url: 'https://github.com/oscarin12/ejercicio3',url1:'https://github.com/oscarin12/ejercicio3', imagen: 'assets/img/ejer3.jpg' },
