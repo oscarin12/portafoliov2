@@ -9,7 +9,7 @@ import { PieDePaginaComponent } from './pie-de-pagina/pie-de-pagina.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,MenuComponent,ProyectosComponent,QuienSoyComponent,ExperienciasComponent,ConocimientosComponent,PieDePaginaComponent],
+  imports: [MenuComponent,ProyectosComponent,QuienSoyComponent,ExperienciasComponent,ConocimientosComponent,PieDePaginaComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
