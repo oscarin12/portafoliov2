@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+  :root {
+            --primary: #3b82f6;
+            --secondary: #1e40af;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: all 0.3s ease;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        body.dark-mode {
+            background-color: #0f172a;
+            color: var(--light);
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-badge {
+            transition: all 0.2s ease;
+        }
+        
+        .skill-badge:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        #hero {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+        }
