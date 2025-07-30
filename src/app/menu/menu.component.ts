@@ -28,18 +28,18 @@ export class MenuComponent {
   closeMenu() {
     this.menuOpen = false;
   }
-  constructor(private pdfService: PdfService) {}
-  imprimir() {
-    const doc = new jsPDF({ format: 'a4', unit: 'mm' });
-
-    // Agregar imagen de perfil
-    const img = new Image();
-    img.src = 'assets/img/oscar.jpg';
-    img.onload = () => {
-      doc.addImage(img, 'JPEG', 10, 10, 40, 40); // Foto en la esquina superior izquierda
-      this.generarContenido(doc);
-    };
-  }
+  constructor(private pdfService: PdfService) { }
+  /*  imprimir() {
+     const doc = new jsPDF({ format: 'a4', unit: 'mm' });
+ 
+     // Agregar imagen de perfil
+     const img = new Image();
+     img.src = 'assets/img/oscar.jpg';
+     img.onload = () => {
+       doc.addImage(img, 'JPEG', 10, 10, 40, 40); // Foto en la esquina superior izquierda
+       this.generarContenido(doc);
+     };
+   } */
 
   generarContenido(doc: jsPDF) {
     let yPosition = 20;
@@ -64,7 +64,7 @@ export class MenuComponent {
     doc.setDrawColor(0, 51, 102);
     doc.line(10, yPosition, 200, yPosition);
     yPosition += 10;
-    
+
     // Sección "Perfil Profesional"
     doc.setFontSize(14);
     doc.setTextColor(0, 51, 102);
@@ -100,8 +100,8 @@ Mi compromiso con el aprendizaje continuo impulsa mi desempeño y me motiva a co
       styles: { fontSize: 10, cellPadding: 2 }
     });
     yPosition = (doc as any).lastAutoTable.finalY + 10;
-    
-    
+
+
     // Sección "Formación"
     doc.setFontSize(14);
     doc.setTextColor(0, 51, 102);
@@ -119,7 +119,7 @@ Mi compromiso con el aprendizaje continuo impulsa mi desempeño y me motiva a co
       styles: { fontSize: 10, cellPadding: 2 }
     });
     yPosition = (doc as any).lastAutoTable.finalY + 10;
-    
+
     // Sección "Conocimientos"
     doc.setFontSize(14);
     doc.setTextColor(0, 51, 102);
@@ -141,7 +141,7 @@ Mi compromiso con el aprendizaje continuo impulsa mi desempeño y me motiva a co
     });
     yPosition = (doc as any).lastAutoTable.finalY + 10;
 
- 
+
     // Sección "Habilidades Blandas"
     doc.setFontSize(14);
     doc.setTextColor(0, 51, 102);
@@ -178,11 +178,11 @@ Mi compromiso con el aprendizaje continuo impulsa mi desempeño y me motiva a co
       headStyles: { fillColor: [0, 51, 102], textColor: [255, 255, 255] },
       styles: { fontSize: 10, cellPadding: 2 }
     });
-    
+
     doc.save('CV_Oscar_Medina.pdf');
   }
-  }
-  
-  
+}
+
+
 
 
